@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'slim'
 gem 'slim-rails'
 gem 'jbuilder', '~> 2.0'
+gem 'the_notification', github: 'the-teacher/the_notification'
 
 gem 'sanitize'
 gem 'kaminari'

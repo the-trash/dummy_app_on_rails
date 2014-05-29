@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   include CommonClassMethods
 
   before_validation :prepare_content
+  validates :title, :raw_content, presence: true
 
   private
 

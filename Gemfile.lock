@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/the-teacher/the_notification.git
+  revision: bfc5582378436f949c8748ab95c51641f32887b1
+  specs:
+    the_notification (0.0.1)
+      slim
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -165,4 +172,5 @@ DEPENDENCIES
   slim-rails
   spring
   sqlite3
+  the_notification!
   uglifier (>= 1.3.0)

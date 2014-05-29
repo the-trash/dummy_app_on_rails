@@ -1,18 +1,21 @@
-= form_for @post do |f|
-  - if @post.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
-      ul
-        - @post.errors.full_messages.each do |message|
-          li = message
+= form_for @post, html: { role: :form } do |f|
+  = render partial: 'the_notification/form', locals: { object: @post }
 
-  .field
+  .form-group
+    span(class="btn btn-primary btn-xs")
+      ' Status:
+      = @post.state
+
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :content
-    = f.text_area :content
-  .field
+    = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :raw_content
-    = f.text_area :raw_content
-  .actions = f.submit 'Save'
+    = f.text_area :raw_content, class: 'form-control', rows: 7
+  .form-group
+    = f.label :state
+    div
+      - options = options_for_select [ [:draft, :draft], [:published, :published] ], @post.state
+      = f.select :state, options
+  .form-group
+    = f.submit 'Save', class: 'btn btn-success'
