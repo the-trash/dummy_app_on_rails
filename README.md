@@ -12,6 +12,12 @@ bundle
 rake app:reset
 ```
 
+#### Ember.js
+
+```
+rails g ember:bootstrap -g --javascript-engine coffee
+```
+
 ### MIT
 
 Let's rock!

@@ -10,6 +10,10 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
 
+# emberization
+gem 'ember-rails'
+gem 'ember-source'
+
 gem 'slim'
 gem 'slim-rails'
 gem 'jbuilder', '~> 2.0'
