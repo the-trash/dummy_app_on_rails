@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.text :raw_content
       t.string :state, default: :draft
+      t.integer :view_count, default: 0
 
       t.timestamps
     end

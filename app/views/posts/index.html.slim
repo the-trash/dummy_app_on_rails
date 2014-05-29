@@ -13,9 +13,8 @@ table.table.table-striped
       th Title
       th Content
       th State
-      th
-      th
-      th
+      th View&nbsp;Count
+      th Actions
 
   tbody
     - @posts.each do |post|
@@ -24,8 +23,10 @@ table.table.table-striped
         td = post.title
         td = post.content
         td = post.state
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = post.view_count
+        td
+          p= link_to 'Show', post
+          p= link_to 'Edit', edit_post_path(post)
+          p= link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 = paginate @posts

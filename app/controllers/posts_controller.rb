@@ -9,7 +9,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show; end
+  def show
+    @post.increment_view_counter!
+  end
 
   # GET /posts/new
   def new

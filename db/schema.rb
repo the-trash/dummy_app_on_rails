@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140529074657) do
     t.text     "content"
     t.text     "raw_content"
     t.string   "state",       default: "draft"
+    t.integer  "view_count",  default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
