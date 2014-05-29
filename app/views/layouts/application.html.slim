@@ -1,0 +1,21 @@
+doctype html
+html(lang=:ru)
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title= content_for?(:title) ? yield(:title) : "DummyApp"
+
+    link(href="favicon.ico" rel="shortcut icon")
+    meta(id="env_token" name="env_token" content="#{ Rails.env.to_s }")
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    :application
+    = javascript_include_tag :application
+
+  body
+    .container
+      .row
+        .col-md-12
+          = yield
