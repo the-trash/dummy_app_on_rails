@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # emberization
 gem 'ember-rails'
 gem 'ember-source'
+gem 'handlebars_assets'
 
 gem 'slim'
 gem 'slim-rails'
